@@ -3,7 +3,7 @@
 A simple console-based calculator written in Python. The calculator supports basic arithmetic operations and allows for continuous calculations based on previous results.
 
 ## Features
-- Supports addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`).
+- Supports addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`) and power of ...(`^`).
 - Keeps track of the last result and allows further operations on it.
 - Handles invalid input and provides user-friendly prompts.
 - Detects and prevents division by zero.
