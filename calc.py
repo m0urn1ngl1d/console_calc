@@ -34,13 +34,13 @@ def calculate(res=[]):
     op, left, right = oper_tup
     if op == "+":
         res.append(left + right)
-    if op == "-":
+    elif op == "-":
         res.append(left - right)
-    if op == "*":
+    elif op == "*":
         res.append(left * right)
-    if op == "^":
+    elif op == "^":
         res.append(left ** right)
-    if op == "/":
+    elif op == "/":
         try:
             res.append(left / right)
         except ZeroDivisionError:
