@@ -12,7 +12,7 @@ A simple console-based calculator written in Python. The calculator supports bas
 ## Usage
 1. Run the script:
    ```sh
-   python calc.py
+   python3 calc.py
    ```
 2. Enter an equation in the format:
    ```
@@ -57,7 +57,7 @@ Make sure you have Python installed, then clone the repository:
 ```sh
 git clone https://github.com/m0urn1ngl1d/console_calc.git
 cd console_calc
-python calc.py
+python3 calc.py
 ```
 ---
 
