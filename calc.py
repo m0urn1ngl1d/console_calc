@@ -43,7 +43,7 @@ def calculate(res=[]):
             res.append(left / right)
         except ZeroDivisionError:
             print("DIVISION BY 0 IS UNEXCEPTABLE")
-            calculate()
+            calculate(res)
     print("Result =", *res)
     return calculate()
 
