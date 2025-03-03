@@ -6,7 +6,7 @@ def check_input():
     return in_box.split()
 
 def el_of_equation(res):
-    math_operators = ("+", "-", "*", "/")
+    math_operators = ("+", "-", "*", "/", "^")
     key_input = check_input()
     if key_input == ["q"]:
         return "q"
@@ -38,6 +38,8 @@ def calculate(res=[]):
         res.append(left - right)
     if op == "*":
         res.append(left * right)
+    if op == "^":
+        res.append(left ** right)
     if op == "/":
         try:
             res.append(left / right)
