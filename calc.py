@@ -8,7 +8,7 @@ def check_input():
 def el_of_equation(res):
     math_operators = ("+", "-", "*", "/", "^")
     key_input = check_input()
-    if key_input == ["q"]:
+    if "q" in key_input:
         return "q"
     key_input.extend(res)
     index = None
@@ -17,20 +17,25 @@ def el_of_equation(res):
         if key_input[i] in math_operators:
             index = i
             op = key_input[i]
-            break   
-    left = float(key_input[index - 1])
-    right = float(key_input[index + 1])
+            break
+    try:       
+        left = float(key_input[index - 1])
+        right = float(key_input[index + 1])
+    except ValueError:
+        print("OOPS! NOT A NUMBER")
+        return None
     # print(key_input)
     return op, left, right
     
 
 def calculate(res=[]):
     oper_tup = el_of_equation(res)
-    if len(res) >= 1:
-        res.remove(res[0])
-    if "q" in oper_tup:
+    if oper_tup == "q":
         print()
         return "BYE!"
+    if oper_tup is None:
+        return calculate()
+    res.clear()
     op, left, right = oper_tup
     if op == "+":
         res.append(left + right)
@@ -50,5 +55,4 @@ def calculate(res=[]):
     return calculate()
 
 
-result = calculate()
-print(result)
+print(calculate())
