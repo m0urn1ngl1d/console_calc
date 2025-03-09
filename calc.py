@@ -13,12 +13,12 @@ def el_of_equation(res):
     key_input.extend(res)
     index = None
     op = None
-    for i in range(len(key_input)):
-        if key_input[i] in math_operators:
+    for i, el in enumerate(key_input):
+        if el in math_operators:
             index = i
-            op = key_input[i]
+            op = el
             break
-    try:       
+    try:
         left = float(key_input[index - 1])
         right = float(key_input[index + 1])
     except ValueError:
@@ -26,7 +26,6 @@ def el_of_equation(res):
         return None
     # print(key_input)
     return op, left, right
-    
 
 def calculate(res=[]):
     oper_tup = el_of_equation(res)
